@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h:outputLabel for="nameTx" >
+                    <h:outputText value="Enter product name :  "/>
+                </h:outputLabel>
+                <h:inputText id="nameTx" value="#{p.name}"/><br /><br/>
+                
+                <h:outputLabel for="quantityTx" >
+                    <h:outputText value="Enter product quantity   :"/>
+                </h:outputLabel>
+                <h:inputText id="quantityTx" value="#{p.quantity}"/><br /><br />
+                
+                <h:outputLabel for="priceTx" >
+                    <h:outputText value="Enter price for product: "/>
+                </h:outputLabel>
+                <h:inputText id="priceTx" value="#{p.price}"/><br />
+                <br />
+                
+                <h:commandButton id="cmdBtn" value="Add Item" action="#{p.add()}"/><br /><br />
+                
+               
+                <h:form>
+                    <h:inputText id="one" value="#{productController.one}"/> x <h:inputText id="two" value="#{productController.two}"/><br /><br />
+                    <h:commandButton id="perFormBtn" value="="   action="#{productController.multiply()}" >
+                       <!--<f:actionListener binding="#{productController.clearFields()}" />-->
+                    </h:commandButton> &nbsp;
+                     
+                    <h:outputText id="theAnswer" value="#{productController.multiply()}" /> <br />
+
+                    
+                </h:form>
+
+            </h:form>
+        </f:view>
+
+        
+    </h:body>
+</html>
+
