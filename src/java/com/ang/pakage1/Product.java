@@ -7,7 +7,9 @@ package com.ang.pakage1;
 
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -24,7 +26,10 @@ import org.hibernate.cfg.Configuration;
 @Entity
 @Table (name="Products")
 @ManagedBean (name="p")
-@SessionScoped
+//@SessionScoped
+//@ViewScoped
+@RequestScoped
+
 public class Product  implements Serializable{
 
     @Id

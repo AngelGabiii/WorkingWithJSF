@@ -66,7 +66,7 @@ public class ProductController  extends Product implements Serializable {
         System.out.println("Why do I get null?");
         // make your database insersion here
         
-        if( p.getQuantity() > 10 ){
+        if( p.getQuantity() > 60 ){
             return "Fail";
         }
         return "Sucess";
